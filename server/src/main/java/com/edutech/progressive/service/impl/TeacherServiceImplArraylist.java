@@ -5,23 +5,38 @@ import java.util.Collections;
 import java.util.List;
 
 import com.edutech.progressive.entity.Teacher;
+import com.edutech.progressive.service.TeacherService;
 
-public class TeacherServiceImplArraylist  {
-public static List<Teacher> teacherList = new ArrayList<>();
-public List<Teacher> getAllTeachers(){
-    return teacherList;
-}
+public class TeacherServiceImplArraylist  implements TeacherService{
+    private static List<Teacher> teacherList=new ArrayList<>();
+    @Override
+    public List<Teacher> getAllTeachers() {
+        // TODO Auto-generated method stub
+       // throw new UnsupportedOperationException("Unimplemented method 'getAllTeachers'");
+       
+       return teacherList;
+    }
 
-public Integer addTeacher(Teacher teacher){
-    teacherList.add(teacher);
-    return teacherList.size();
-}
-public List<Teacher> getTeacherSortedByExperience(){
-    Collections.sort(teacherList);
-    return teacherList;
-}
+    @Override
+    public Integer addTeacher(Teacher teacher) {
+        // TODO Auto-generated method stub
+       // throw new UnsupportedOperationException("Unimplemented method 'addTeacher'");
+        teacherList.add(teacher);
+       return teacherList.size();
+    }
 
-public void emptyArrayList(){
-    teacherList.clear();
-}
+    @Override
+    public List<Teacher> getTeacherSortedByExperience() {
+        // TODO Auto-generated method stub
+       // throw new UnsupportedOperationException("Unimplemented method 'getTeacherSortedByExperience'");
+        Collections.sort(teacherList);
+        return teacherList;
+    }
+
+    public void emptyArrayList(){
+teacherList.clear();
+    }
+
+    
+
 }

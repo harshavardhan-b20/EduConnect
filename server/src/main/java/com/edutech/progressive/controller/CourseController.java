@@ -1,13 +1,18 @@
 package com.edutech.progressive.controller;
 
 import com.edutech.progressive.entity.Course;
+import com.edutech.progressive.service.CourseService;
+import com.edutech.progressive.service.impl.CourseServiceImplJdbc;
+
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
 public class CourseController {
-    public ResponseEntity<List<Course>> getAllCourses() {
-        return null;
+
+    
+    public List<Course> getAllCourses() {
+       return null;
     }
 
     public ResponseEntity<Course> getCourseById(int courseId) {
